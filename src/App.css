@@ -1,0 +1,53 @@
+body {
+  background: url('https://tctechcrunch2011.files.wordpress.com/2015/02/wikipedia-down.png');
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  padding: 20px;
+}
+
+.App-body {
+  font-size: large;
+}
+
+.App-search {
+  margin: 0 auto;
+}
+
+.single-result {
+  background-color: rgba(245, 245, 245, 0.8);
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  width: auto;
+  max-width: 600px;
+  padding: 10px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+  margin-bottom: 10px !important;
+  margin: 0 auto;
+}
+
+.single-result > h3, .single-result > p {
+  margin: 0px;
+  color: #333 !important;
+}
+
+.footer {
+  color: #FFF;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
