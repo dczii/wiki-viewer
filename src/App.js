@@ -4,7 +4,6 @@ import './App.css';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import TextField from 'material-ui/TextField';
 import SearchWebIcon from 'mdi-react/SearchWebIcon';
-import Animate from 'react-animate.css'
 import ResultList from './components/ResultList';
 
 import superagent from 'superagent';
@@ -33,7 +32,7 @@ class App extends Component {
 
     this.setState({searchValue: e.target.value})
     setTimeout(() => {
-      this. handleSearch(this.state.searchValue)
+      this.handleSearch(this.state.searchValue)
     })
   }
 
@@ -70,19 +69,13 @@ class App extends Component {
             <img src="https://dczii.github.io/images/logo-white.png" className="App-logo" alt="logo" />
           </div>
           <div className="App-body">
-            <div style={{display: 'inline-block'}}>
-              <Animate
-                animationEnter="fadeIn"
-                animationLeave="fadeOut"
-                durationEnter={1000}
-                durationLeave={1000} >
-                {search}
-              </Animate>
-            </div>
-            <div style={{display: 'inline-block'}}>
+            <div>
               <FloatingActionButton onClick={this.onSearch}>
                 <SearchWebIcon /> 
               </FloatingActionButton>
+            </div>
+            <div>
+                {search}
             </div>
             {this.state.results ? 
               <ResultList results={this.state.results}/>

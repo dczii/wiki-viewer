@@ -1,6 +1,4 @@
-/* global _ */
 import React, { Component } from 'react';
-// import Animate from 'react-animate.css'
 import SingleResult from './SingleResult';
 import _ from 'lodash';
 
