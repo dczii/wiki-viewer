@@ -6,9 +6,6 @@ import TextField from 'material-ui/TextField';
 import SearchWebIcon from 'mdi-react/SearchWebIcon';
 import ResultList from './components/ResultList';
 
-import superagent from 'superagent';
-import jsonp from 'superagent-jsonp';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -37,20 +34,34 @@ class App extends Component {
   }
 
   handleSearch(searchTerm) {
-        superagent.get('https://en.wikipedia.org/w/api.php')
-            .query({
-                search: searchTerm,
-                action: 'opensearch',
-                format: 'json'
-            })
-            .use(jsonp)
-            .end((error, response) => {
-               if (error) {
-                   console.error(error);
-               } else {
-                   this.setState({ results: response.body });
-               }
-            });
+        // superagent.get('https://en.wikipedia.org/w/api.php')
+        //     .query({
+        //         search: searchTerm,
+        //         action: 'opensearch',
+        //         format: 'json'
+        //     })
+        //     .use(jsonp)
+        //     .end((error, response) => {
+        //        if (error) {
+        //            console.error(error);
+        //        } else {
+        //           //  this.setState({ results: response.body });
+        //           console.log(response)
+        //        }
+        //     });
+        fetch(`https://cors.io/?http://en.wikipedia.org/w/api.php?origin=*&action=query&list=search&srsearch=queen&format=json`)
+        .then(res => res.json())
+        .then(
+          (result) => {
+            console.log(result)
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+          (error) => {
+            console.log(error)
+          }
+        )
     }
 
   render() {
