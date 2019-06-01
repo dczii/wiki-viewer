@@ -11,10 +11,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "react-addons-css-transition-group": "^15.6.2",
-    "react-animate.css": "^1.2.1",
-    "superagent": "^5.0.5",
-    "superagent-jsonp": "^0.2.1"
+    "react-addons-css-transition-group": "^15.6.2"
   },
   "scripts": {
     "predeploy": "npm run build",
