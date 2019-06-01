@@ -26,43 +26,24 @@ class App extends Component {
   }
 
   onSearchText = (e) => {
-
-    this.setState({searchValue: e.target.value})
-    setTimeout(() => {
-      this.handleSearch(this.state.searchValue)
-    })
+    this.setState({ searchValue: e.target.value })
+    this.handleSearch(e.target.value)
   }
 
   handleSearch(searchTerm) {
-        // superagent.get('https://en.wikipedia.org/w/api.php')
-        //     .query({
-        //         search: searchTerm,
-        //         action: 'opensearch',
-        //         format: 'json'
-        //     })
-        //     .use(jsonp)
-        //     .end((error, response) => {
-        //        if (error) {
-        //            console.error(error);
-        //        } else {
-        //           //  this.setState({ results: response.body });
-        //           console.log(response)
-        //        }
-        //     });
-        fetch(`https://cors.io/?http://en.wikipedia.org/w/api.php?origin=*&action=query&list=search&srsearch=queen&format=json`)
-        .then(res => res.json())
-        .then(
-          (result) => {
-            console.log(result)
-          },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
-          (error) => {
-            console.log(error)
-          }
-        )
-    }
+    fetch(`https://cors.io/?http://en.wikipedia.org/w/api.php?origin=*&action=query&list=search&srsearch=${searchTerm}&format=json`)
+    .then(res => res.json())
+    .then(
+      (result) => {
+        this.setState({
+          results: result.query.search
+        })
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
+  }
 
   render() {
     var search = this.state.searchField ? <TextField className='App-search'
