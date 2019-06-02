@@ -1,6 +1,17 @@
 {
-  "main.css": "static/css/main.057049f2.css",
-  "main.css.map": "static/css/main.057049f2.css.map",
-  "main.js": "static/js/main.8066bba9.js",
-  "main.js.map": "static/js/main.8066bba9.js.map"
+  "files": {
+    "main.css": "/wiki-viewer/static/css/main.db70a4c6.chunk.css",
+    "main.js": "/wiki-viewer/static/js/main.ca3dcbec.chunk.js",
+    "main.js.map": "/wiki-viewer/static/js/main.ca3dcbec.chunk.js.map",
+    "runtime~main.js": "/wiki-viewer/static/js/runtime~main.342bfa58.js",
+    "runtime~main.js.map": "/wiki-viewer/static/js/runtime~main.342bfa58.js.map",
+    "static/css/2.fba157c0.chunk.css": "/wiki-viewer/static/css/2.fba157c0.chunk.css",
+    "static/js/2.32fe3dcb.chunk.js": "/wiki-viewer/static/js/2.32fe3dcb.chunk.js",
+    "static/js/2.32fe3dcb.chunk.js.map": "/wiki-viewer/static/js/2.32fe3dcb.chunk.js.map",
+    "index.html": "/wiki-viewer/index.html",
+    "precache-manifest.4df5ce89803ecd1ef542f3cb4fef0932.js": "/wiki-viewer/precache-manifest.4df5ce89803ecd1ef542f3cb4fef0932.js",
+    "service-worker.js": "/wiki-viewer/service-worker.js",
+    "static/css/2.fba157c0.chunk.css.map": "/wiki-viewer/static/css/2.fba157c0.chunk.css.map",
+    "static/css/main.db70a4c6.chunk.css.map": "/wiki-viewer/static/css/main.db70a4c6.chunk.css.map"
+  }
 }
